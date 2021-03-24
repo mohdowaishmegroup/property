@@ -105,7 +105,7 @@
                             <h2 class="text-capitalize text-white ">single property</h2>
                             <ul class="list-inline ">
                                 <li class="list-inline-item">
-                                    <a href="#" class="text-white">
+                                    <a href="{% url 'dashbord' %}" class="text-white">
                                         home
                                     </a>
                                 </li>
@@ -147,7 +147,7 @@
                             </div>
                             <div class="col-md-4 col-lg-4">
                                 <div class="single__detail-area-price">
-                                    <h3 class="text-capitalize text-gray">$13.000/mo</h3>
+                                    <h3 class="text-capitalize text-gray">{{list.price}}/mo</h3>
                                     <ul class="list-inline">
                                         <li class="list-inline-item">
                                             <a href="#" class="badge badge-primary p-2 rounded"><i
@@ -172,14 +172,14 @@
                     <div class="slider__image__detail-large-two owl-carousel owl-theme">
                         <div class="item">
                             <div class="slider__image__detail-large-one">
-                                <img src="images/1920x1080.jpg" alt="" class="img-fluid w-100 img-transition">
+                                <img src="{{ list.photo_main }}" alt="" class="img-fluid w-100 img-transition">
                                 <div class="description">
                                     <figure>
-                                        <img src="images/80x80.jpg" alt="" class="img-fluid">
+                                        <img src="{{ list.photo_main }}" alt="" class="img-fluid">
                                     </figure>
                                     <span class="badge badge-primary text-capitalize mb-2">house</span>
                                     <div class="price">
-                                        <h5 class="text-capitalize">$13,000/mo</h5>
+                                        <h5 class="text-capitalize">{{ list.price }}/mo</h5>
                                     </div>
                                     <h4 class="text-capitalize">Luxury Family Home</h4>
 
@@ -189,14 +189,14 @@
                         </div>
                         <div class="item">
                             <div class="slider__image__detail-large-one">
-                                <img src="images/1920x1080.jpg" alt="" class="img-fluid w-100 img-transition">
+                                <img src="{{ list.photo_2 }}" alt="" class="img-fluid w-100 img-transition">
                                 <div class="description">
                                     <figure>
-                                        <img src="images/80x80.jpg" alt="" class="img-fluid">
+                                        <img src="{{ list.photo_2 }}" alt="" class="img-fluid">
                                     </figure>
                                     <span class="badge badge-primary text-capitalize mb-2">house</span>
                                     <div class="price">
-                                        <h5 class="text-capitalize">$13,000/mo</h5>
+                                        <h5 class="text-capitalize">{{ list.price }}</h5>
                                     </div>
                                     <h4 class="text-capitalize">Luxury Family Home</h4>
 
@@ -206,111 +206,116 @@
                         </div>
                         <div class="item">
                             <div class="slider__image__detail-large-one">
-                                <img src="images/1920x1080.jpg" alt="" class="img-fluid w-100 img-transition">
+                                <img src="{{ list.photo_3 }}" alt="" class="img-fluid w-100 img-transition">
                                 <div class="description">
                                     <figure>
-                                        <img src="images/80x80.jpg" alt="" class="img-fluid">
+                                        <img src="{{ list.photo_3 }}" alt="" class="img-fluid">
                                     </figure>
                                     <span class="badge badge-primary text-capitalize mb-2">house</span>
                                     <div class="price">
-                                        <h5 class="text-capitalize">$13,000/mo</h5>
+                                        <h5 class="text-capitalize">{{ list.price }}</h5>
                                     </div>
                                     <h4 class="text-capitalize">Luxury Family Home</h4>
 
                                 </div>
-                            </div>
 
+                            </div>
                         </div>
                         <div class="item">
                             <div class="slider__image__detail-large-one">
-                                <img src="images/1920x1080.jpg" alt="" class="img-fluid w-100 img-transition">
+                                <img src="{{ list.photo_4 }}" alt="" class="img-fluid w-100 img-transition">
                                 <div class="description">
                                     <figure>
-                                        <img src="images/80x80.jpg" alt="" class="img-fluid">
+                                        <img src="{{ list.photo_4 }}" alt="" class="img-fluid">
                                     </figure>
                                     <span class="badge badge-primary text-capitalize mb-2">house</span>
                                     <div class="price">
-                                        <h5 class="text-capitalize">$13,000/mo</h5>
+                                        <h5 class="text-capitalize">{{ list.price }}</h5>
                                     </div>
                                     <h4 class="text-capitalize">Luxury Family Home</h4>
 
                                 </div>
+
                             </div>
                         </div>
                         <div class="item">
                             <div class="slider__image__detail-large-one">
-                                <img src="images/1920x1080.jpg" alt="" class="img-fluid w-100 img-transition">
+                                <img src="{{ list.photo_5 }}" alt="" class="img-fluid w-100 img-transition">
                                 <div class="description">
                                     <figure>
-                                        <img src="images/80x80.jpg" alt="" class="img-fluid">
+                                        <img src="{{ list.photo_5 }}" alt="" class="img-fluid">
                                     </figure>
                                     <span class="badge badge-primary text-capitalize mb-2">house</span>
                                     <div class="price">
-                                        <h5 class="text-capitalize">$13,000/mo</h5>
+                                        <h5 class="text-capitalize">{{ list.price }}</h5>
                                     </div>
                                     <h4 class="text-capitalize">Luxury Family Home</h4>
 
                                 </div>
+
                             </div>
                         </div>
                         <div class="item">
                             <div class="slider__image__detail-large-one">
-                                <img src="images/1920x1080.jpg" alt="" class="img-fluid w-100 img-transition">
+                                <img src="{{ list.photo_6 }}" alt="" class="img-fluid w-100 img-transition">
                                 <div class="description">
                                     <figure>
-                                        <img src="images/80x80.jpg" alt="" class="img-fluid">
+                                        <img src="{{ list.photo_6 }}" alt="" class="img-fluid">
                                     </figure>
                                     <span class="badge badge-primary text-capitalize mb-2">house</span>
                                     <div class="price">
-                                        <h5 class="text-capitalize">$13,000/mo</h5>
+                                        <h5 class="text-capitalize">{{ list.price }}</h5>
                                     </div>
                                     <h4 class="text-capitalize">Luxury Family Home</h4>
 
                                 </div>
+
                             </div>
                         </div>
                         <div class="item">
                             <div class="slider__image__detail-large-one">
-                                <img src="images/1920x1080.jpg" alt="" class="img-fluid w-100 img-transition">
+                                <img src="{{ list.photo_1 }}" alt="" class="img-fluid w-100 img-transition">
                                 <div class="description">
                                     <figure>
-                                        <img src="images/80x80.jpg" alt="" class="img-fluid">
+                                        <img src="{{ list.photo_1 }}" alt="" class="img-fluid">
                                     </figure>
                                     <span class="badge badge-primary text-capitalize mb-2">house</span>
                                     <div class="price">
-                                        <h5 class="text-capitalize">$13,000/mo</h5>
+                                        <h5 class="text-capitalize">{{ list.price }}</h5>
                                     </div>
                                     <h4 class="text-capitalize">Luxury Family Home</h4>
 
                                 </div>
+
                             </div>
                         </div>
                         <div class="item">
                             <div class="slider__image__detail-large-one">
-                                <img src="images/1920x1080.jpg" alt="" class="img-fluid w-100 img-transition">
+                                <img src="{{ list.photo_1 }}" alt="" class="img-fluid w-100 img-transition">
                                 <div class="description">
                                     <figure>
-                                        <img src="images/80x80.jpg" alt="" class="img-fluid">
+                                        <img src="{{ list.photo_1 }}" alt="" class="img-fluid">
                                     </figure>
                                     <span class="badge badge-primary text-capitalize mb-2">house</span>
                                     <div class="price">
-                                        <h5 class="text-capitalize">$13,000/mo</h5>
+                                        <h5 class="text-capitalize">{{ list.price }}</h5>
                                     </div>
                                     <h4 class="text-capitalize">Luxury Family Home</h4>
 
                                 </div>
+
                             </div>
                         </div>
                         <div class="item">
                             <div class="slider__image__detail-large-one">
-                                <img src="images/1920x1080.jpg" alt="" class="img-fluid w-100 img-transition">
+                                <img src="{{list.photo_2}}" alt="" class="img-fluid w-100 img-transition">
                                 <div class="description">
                                     <figure>
-                                        <img src="images/80x80.jpg" alt="" class="img-fluid">
+                                        <img src="{{list.photo_2}}" alt="" class="img-fluid">
                                     </figure>
                                     <span class="badge badge-primary text-capitalize mb-2">house</span>
                                     <div class="price">
-                                        <h5 class="text-capitalize">$13,000/mo</h5>
+                                        <h5 class="text-capitalize">{{list.price}}/mo</h5>
                                     </div>
                                     <h4 class="text-capitalize">Luxury Family Home</h4>
                                     <!-- <p class="text-uppercase">
@@ -324,47 +329,47 @@
                     <div class="slider__image__detail-thumb-two owl-carousel owl-theme">
                         <div class="item">
                             <div class="slider__image__detail-thumb-one">
-                                <img src="images/600x400.jpg" alt="" class="img-fluid w-100 img-transition">
+                                <img src="{{list.photo_main}}" alt="" class="img-fluid w-100 img-transition">
                             </div>
                         </div>
                         <div class="item">
                             <div class="slider__image__detail-thumb-one">
-                                <img src="images/600x400.jpg" alt="" class="img-fluid w-100 img-transition">
+                                <img src="{{list.photo_1}}" alt="" class="img-fluid w-100 img-transition">
                             </div>
                         </div>
                         <div class="item">
                             <div class="slider__image__detail-thumb-one">
-                                <img src="images/600x400.jpg" alt="" class="img-fluid w-100 img-transition">
+                                <img src="{{list.photo_1}}" alt="" class="img-fluid w-100 img-transition">
                             </div>
                         </div>
                         <div class="item">
                             <div class="slider__image__detail-thumb-one">
-                                <img src="images/600x400.jpg" alt="" class="img-fluid w-100 img-transition">
+                                <img src="{{list.photo_2}}" alt="" class="img-fluid w-100 img-transition">
                             </div>
                         </div>
                         <div class="item">
                             <div class="slider__image__detail-thumb-one">
-                                <img src="images/600x400.jpg" alt="" class="img-fluid w-100 img-transition">
+                                <img src="{{list.photo_3}}" alt="" class="img-fluid w-100 img-transition">
                             </div>
                         </div>
                         <div class="item">
                             <div class="slider__image__detail-thumb-one">
-                                <img src="images/600x400.jpg" alt="" class="img-fluid w-100 img-transition">
+                                <img src="{{list.photo_4}}" alt="" class="img-fluid w-100 img-transition">
                             </div>
                         </div>
                         <div class="item">
                             <div class="slider__image__detail-thumb-one">
-                                <img src="images/600x400.jpg" alt="" class="img-fluid w-100 img-transition">
+                                <img src="{{list.photo_5}}" alt="" class="img-fluid w-100 img-transition">
                             </div>
                         </div>
                         <div class="item">
                             <div class="slider__image__detail-thumb-one">
-                                <img src="images/600x400.jpg" alt="" class="img-fluid w-100 img-transition">
+                                <img src="{{list.photo_6}}" alt="" class="img-fluid w-100 img-transition">
                             </div>
                         </div>
                         <div class="item">
                             <div class="slider__image__detail-thumb-one">
-                                <img src="images/600x400.jpg" alt="" class="img-fluid w-100 img-transition">
+                                <img src="{{list.photo_1}}" alt="" class="img-fluid w-100 img-transition">
                             </div>
                         </div>
                     </div>
@@ -732,17 +737,17 @@
                                     <div class="row">
                                         <div class="col-md-6 col-lg-6">
                                             <ul class="property__detail-info-list list-unstyled">
-                                                <li><b>Property ID:</b> RV151</li>
-                                                <li><b>Price:</b> $484,400</li>
-                                                <li><b>Property Size:</b> 1466 Sq Ft</li>
-                                                <li><b>Bedrooms:</b> 4</li>
-                                                <li><b>Bathrooms:</b> 2</li>
+                                                <li><b>Property ID:</b> {{list.id}}</li>
+                                                <li><b>Price:</b> {{list.price}}</li>
+                                                <li><b>Property Size:</b>{{list.sqft}}</li>
+                                                <li><b>Bedrooms:</b>{{list.bedrooms}}</li>
+                                                <li><b>Bathrooms:</b>{{list.garage}}</li>
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-lg-6">
                                             <ul class="property__detail-info-list list-unstyled">
                                                 <li><b>Garage:</b> 1</li>
-                                                <li><b>Garage Size:</b> 458 SqFt</li>
+                                                <li><b>Garage Size:</b> {{list.sqft}}</li>
                                                 <li><b>Year Built:</b> 2019-01-09</li>
                                                 <li><b>Property Type:</b> Full Family Home</li>
                                                 <li><b>Property Status:</b> For rent</li>
@@ -753,17 +758,17 @@
                                     <div class="row">
                                         <div class="col-md-6 col-lg-6">
                                             <ul class="property__detail-info-list list-unstyled">
-                                                <li><b>Property ID:</b> RV151</li>
-                                                <li><b>Price:</b> $484,400</li>
-                                                <li><b>Property Size:</b> 1466 Sq Ft</li>
-                                                <li><b>Bedrooms:</b> 4</li>
-                                                <li><b>Bathrooms:</b> 2</li>
+                                                <li><b>Property ID:</b>{{list.id}}</li>
+                                                <li><b>Price:</b> {{list.price}}</li>
+                                                <li><b>Property Size:</b>{{list.sqft}}</li>
+                                                <li><b>Bedrooms:</b>{{list.bedrooms}}</li>
+                                                <li><b>Bathrooms:</b>{{list.garage}}</li>
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-lg-6">
                                             <ul class="property__detail-info-list list-unstyled">
                                                 <li><b>Garage:</b> 1</li>
-                                                <li><b>Garage Size:</b> 458 SqFt</li>
+                                                <li><b>Garage Size:</b> {{list.sq}}</li>
                                                 <li><b>Year Built:</b> 2019-01-09</li>
                                                 <li><b>Property Type:</b> Full Family Home</li>
                                                 <li><b>Property Status:</b> For rent</li>
@@ -815,7 +820,7 @@
                                             aria-labelledby="headingOne" data-parent="#accordion">
                                             <div class="card-body">
                                                 <figure>
-                                                    <img src="images/floorplan.jpg" alt="" class="img-fluid">
+                                                    <img src="{% static 'images/floorplan.jpg' %}" alt="" class="img-fluid">
                                                 </figure>
 
                                                 Excepteur sint ocaec at cupdatat proident suntin culpa qui officia
@@ -1129,557 +1134,81 @@
                             similiar properties
                         </h6>
                         <div class="similiar__property-carousel owl-carousel owl-theme">
-                            <div class="item">
-                                <!-- ONE -->
-                                <div class="card__image">
-                                    <div class="card__image-header h-250">
-                                        <div class="ribbon text-capitalize">featured</div>
-                                        <img src="images/1920x1080.jpg" alt="" class="img-fluid w100 img-transition">
-                                        <div class="info"> for sale</div>
-                                    </div>
-                                    <div class="card__image-body">
-                                        <span class="badge badge-primary text-capitalize mb-2">house</span>
-                                        <h6 class="text-capitalize">
-                                            <a href="#">vila in coral gables</a>
-                                        </h6>
+                        {% for d in data %}
+                        <div class="item">
+                        
+                            <div class="card__image card__box">
+                                <div class="card__image-header h-250">
+                                    <div class="ribbon text-capitalize">featured</div>
+                                    <img src="{{ d.photo_1 }}" alt="" class="img-fluid w100 img-transition">
+                                    <div class="info"> for sale</div>
+                                </div>
+                                <div class="card__image-body">
+                                    <span class="badge badge-primary text-capitalize mb-2">house</span>
+                                    
+                                    <h6 class="text-capitalize">
+                                    {{d.title}}
+                                    </h6>
+                                       
+                                    <p class="text-capitalize">
+                                        <i class="fa fa-map-marker"></i>
+                                        {{d.address}}
+                                    </p>
+                                    
+                                    <ul class="list-inline card__content">
+                                        <li class="list-inline-item">
 
-                                        <p class="text-capitalize">
-                                            <i class="fa fa-map-marker"></i>
-                                            west flaminggo road, las vegas
-                                        </p>
-                                        <ul class="list-inline card__content">
-                                            <li class="list-inline-item">
+                                            <span>
+                                                baths <br>
+                                                <i class="fa fa-bath"></i> {{d.bedrooms}}
+                                            </span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>
+                                                beds <br>
+                                                <i class="fa fa-bed"></i> {{d.bedrooms}}
+                                            </span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>
+                                                rooms <br>
+                                                <i class="fa fa-inbox"></i> {{d.bedrooms}}
+                                            </span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>
+                                                area <br>
+                                                <i class="fa fa-map"></i> {{d.sqft}}
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="card__image-footer">
+                                    <figure>
+                                        <img src="images/80x80.jpg" alt="" class="img-fluid rounded-circle">
+                                    </figure>
+                                    <ul class="list-inline my-auto">
+                                        <li class="list-inline-item">
+                                            <a href= "{% url 'single' %}/{{d.id}}">
+                                                {{d.state}} <br>
+                                            </a>
 
-                                                <span>
-                                                    baths <br>
-                                                    <i class="fa fa-bath"></i> 2
-                                                </span>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <span>
-                                                    beds <br>
-                                                    <i class="fa fa-bed"></i> 3
-                                                </span>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <span>
-                                                    rooms <br>
-                                                    <i class="fa fa-inbox"></i> 3
-                                                </span>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <span>
-                                                    area <br>
-                                                    <i class="fa fa-map"></i> 4300 sq ft
-                                                </span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="card__image-footer">
-                                        <figure>
-                                            <img src="images/80x80.jpg" alt="" class="img-fluid rounded-circle">
-                                        </figure>
-                                        <ul class="list-inline my-auto">
-                                            <li class="list-inline-item">
-                                                <a href="#">
-                                                    tom wilson <br>
-                                                </a>
+                                        </li>
 
-                                            </li>
-
-                                        </ul>
-                                        <ul class="list-inline my-auto ml-auto">
-                                            <li class="list-inline-item">
-
-                                                <h6 class="text-primary">$350.000</h6>
-                                            </li>
-
-                                        </ul>
-                                    </div>
+                                    </ul>
+                                    <ul class="list-inline my-auto ml-auto">
+                                        <li class="list-inline-item ">
+                                            <h6>{{d.price}}</h6>
+                                        </li>
+                                        
+                                    </ul>
+                                    
                                 </div>
                             </div>
-                            <div class="item">
-                                <!-- TWO -->
-                                <div class="card__image">
-                                    <div class="card__image-header h-250">
-                                        <div class="ribbon text-capitalize">featured</div>
-                                        <img src="images/1920x1080.jpg" alt="" class="img-fluid w100 img-transition">
-                                        <div class="info"> for sale</div>
-                                    </div>
-                                    <div class="card__image-body">
-                                        <span class="badge badge-primary text-capitalize mb-2">house</span>
-                                        <h6 class="text-capitalize">
-                                            <a href="#">Ample Apartment At Last Floor</a>
-                                        </h6>
+                    
+                        </div>
+                        {% endfor %}  
 
-                                        <p class="text-capitalize">
-                                            <i class="fa fa-map-marker"></i>
-                                            west flaminggo road, las vegas
-                                        </p>
-                                        <ul class="list-inline card__content">
-                                            <li class="list-inline-item">
-
-                                                <span>
-                                                    baths <br>
-                                                    <i class="fa fa-bath"></i> 2
-                                                </span>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <span>
-                                                    beds <br>
-                                                    <i class="fa fa-bed"></i> 3
-                                                </span>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <span>
-                                                    rooms <br>
-                                                    <i class="fa fa-inbox"></i> 3
-                                                </span>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <span>
-                                                    area <br>
-                                                    <i class="fa fa-map"></i> 4300 sq ft
-                                                </span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="card__image-footer">
-                                        <figure>
-                                            <img src="images/80x80.jpg" alt="" class="img-fluid rounded-circle">
-                                        </figure>
-                                        <ul class="list-inline my-auto">
-                                            <li class="list-inline-item">
-                                                <a href="#">
-                                                    tom wilson <br>
-                                                </a>
-
-                                            </li>
-
-                                        </ul>
-                                        <ul class="list-inline my-auto ml-auto">
-                                            <li class="list-inline-item">
-
-                                                <h6 class="text-primary">$350.000</h6>
-                                            </li>
-
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <!-- THREE -->
-                                <div class="card__image">
-                                    <div class="card__image-header h-250">
-                                        <div class="ribbon text-capitalize">featured</div>
-                                        <img src="images/1920x1080.jpg" alt="" class="img-fluid w100 img-transition">
-                                        <div class="info"> for sale</div>
-                                    </div>
-                                    <div class="card__image-body">
-                                        <span class="badge badge-primary text-capitalize mb-2">house</span>
-                                        <h6 class="text-capitalize">
-                                            <a href="#">Contemporary Apartment</a>
-                                        </h6>
-
-                                        <p class="text-capitalize">
-                                            <i class="fa fa-map-marker"></i>
-                                            west flaminggo road, las vegas
-                                        </p>
-                                        <ul class="list-inline card__content">
-                                            <li class="list-inline-item">
-
-                                                <span>
-                                                    baths <br>
-                                                    <i class="fa fa-bath"></i> 2
-                                                </span>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <span>
-                                                    beds <br>
-                                                    <i class="fa fa-bed"></i> 3
-                                                </span>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <span>
-                                                    rooms <br>
-                                                    <i class="fa fa-inbox"></i> 3
-                                                </span>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <span>
-                                                    area <br>
-                                                    <i class="fa fa-map"></i> 4300 sq ft
-                                                </span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="card__image-footer">
-                                        <figure>
-                                            <img src="images/80x80.jpg" alt="" class="img-fluid rounded-circle">
-                                        </figure>
-                                        <ul class="list-inline my-auto">
-                                            <li class="list-inline-item">
-                                                <a href="#">
-                                                    tom wilson <br>
-                                                </a>
-
-                                            </li>
-
-                                        </ul>
-                                        <ul class="list-inline my-auto ml-auto">
-                                            <li class="list-inline-item">
-
-                                                <h6 class="text-primary">$350.000</h6>
-                                            </li>
-
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <!-- FOUR -->
-                                <div class="card__image">
-                                    <div class="card__image-header h-250">
-                                        <div class="ribbon text-capitalize">featured</div>
-                                        <img src="images/1920x1080.jpg" alt="" class="img-fluid w100 img-transition">
-                                        <div class="info"> for sale</div>
-                                    </div>
-                                    <div class="card__image-body">
-                                        <span class="badge badge-primary text-capitalize mb-2">house</span>
-                                        <h6 class="text-capitalize">
-                                            <a href="#">Family Home For Sale</a>
-                                        </h6>
-
-                                        <p class="text-capitalize">
-                                            <i class="fa fa-map-marker"></i>
-                                            west flaminggo road, las vegas
-                                        </p>
-                                        <ul class="list-inline card__content">
-                                            <li class="list-inline-item">
-
-                                                <span>
-                                                    baths <br>
-                                                    <i class="fa fa-bath"></i> 2
-                                                </span>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <span>
-                                                    beds <br>
-                                                    <i class="fa fa-bed"></i> 3
-                                                </span>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <span>
-                                                    rooms <br>
-                                                    <i class="fa fa-inbox"></i> 3
-                                                </span>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <span>
-                                                    area <br>
-                                                    <i class="fa fa-map"></i> 4300 sq ft
-                                                </span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="card__image-footer">
-                                        <figure>
-                                            <img src="images/80x80.jpg" alt="" class="img-fluid rounded-circle">
-                                        </figure>
-                                        <ul class="list-inline my-auto">
-                                            <li class="list-inline-item">
-                                                <a href="#">
-                                                    tom wilson <br>
-                                                </a>
-
-                                            </li>
-
-                                        </ul>
-                                        <ul class="list-inline my-auto ml-auto">
-                                            <li class="list-inline-item">
-
-                                                <h6 class="text-primary">$350.000</h6>
-                                            </li>
-
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <!-- FIVE -->
-                                <div class="card__image">
-                                    <div class="card__image-header h-250">
-                                        <div class="ribbon text-capitalize">featured</div>
-                                        <img src="images/1920x1080.jpg" alt="" class="img-fluid w100 img-transition">
-                                        <div class="info"> for sale</div>
-                                    </div>
-                                    <div class="card__image-body">
-                                        <span class="badge badge-primary text-capitalize mb-2">house</span>
-                                        <h6 class="text-capitalize">
-                                            <a href="#">184 Lexington Avenue</a>
-                                        </h6>
-
-                                        <p class="text-capitalize">
-                                            <i class="fa fa-map-marker"></i>
-                                            west flaminggo road, las vegas
-                                        </p>
-                                        <ul class="list-inline card__content">
-                                            <li class="list-inline-item">
-
-                                                <span>
-                                                    baths <br>
-                                                    <i class="fa fa-bath"></i> 2
-                                                </span>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <span>
-                                                    beds <br>
-                                                    <i class="fa fa-bed"></i> 3
-                                                </span>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <span>
-                                                    rooms <br>
-                                                    <i class="fa fa-inbox"></i> 3
-                                                </span>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <span>
-                                                    area <br>
-                                                    <i class="fa fa-map"></i> 4300 sq ft
-                                                </span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="card__image-footer">
-                                        <figure>
-                                            <img src="images/80x80.jpg" alt="" class="img-fluid rounded-circle">
-                                        </figure>
-                                        <ul class="list-inline my-auto">
-                                            <li class="list-inline-item">
-                                                <a href="#">
-                                                    tom wilson <br>
-                                                </a>
-
-                                            </li>
-
-                                        </ul>
-                                        <ul class="list-inline my-auto ml-auto">
-                                            <li class="list-inline-item">
-
-                                                <h6 class="text-primary">$350.000</h6>
-                                            </li>
-
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <!-- SIX -->
-                                <div class="card__image">
-                                    <div class="card__image-header h-250">
-                                        <div class="ribbon text-capitalize">featured</div>
-                                        <img src="images/1920x1080.jpg" alt="" class="img-fluid w100 img-transition">
-                                        <div class="info"> for sale</div>
-                                    </div>
-                                    <div class="card__image-body">
-                                        <span class="badge badge-primary text-capitalize mb-2">house</span>
-                                        <h6 class="text-capitalize">
-                                            <a href="#">Luxury Villa With Pool</a>
-                                        </h6>
-
-                                        <p class="text-capitalize">
-                                            <i class="fa fa-map-marker"></i>
-                                            west flaminggo road, las vegas
-                                        </p>
-                                        <ul class="list-inline card__content">
-                                            <li class="list-inline-item">
-
-                                                <span>
-                                                    baths <br>
-                                                    <i class="fa fa-bath"></i> 2
-                                                </span>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <span>
-                                                    beds <br>
-                                                    <i class="fa fa-bed"></i> 3
-                                                </span>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <span>
-                                                    rooms <br>
-                                                    <i class="fa fa-inbox"></i> 3
-                                                </span>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <span>
-                                                    area <br>
-                                                    <i class="fa fa-map"></i> 4300 sq ft
-                                                </span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="card__image-footer">
-                                        <figure>
-                                            <img src="images/80x80.jpg" alt="" class="img-fluid rounded-circle">
-                                        </figure>
-                                        <ul class="list-inline my-auto">
-                                            <li class="list-inline-item">
-                                                <a href="#">
-                                                    tom wilson <br>
-                                                </a>
-
-                                            </li>
-
-                                        </ul>
-                                        <ul class="list-inline my-auto ml-auto">
-                                            <li class="list-inline-item">
-
-                                                <h6 class="text-primary">$350.000</h6>
-                                            </li>
-
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="card__image">
-                                    <div class="card__image-header h-250">
-                                        <div class="ribbon text-capitalize">featured</div>
-                                        <img src="images/1920x1080.jpg" alt="" class="img-fluid w100 img-transition">
-                                        <div class="info"> for sale</div>
-                                    </div>
-                                    <div class="card__image-body">
-                                        <span class="badge badge-primary text-capitalize mb-2">house</span>
-                                        <h6 class="text-capitalize">
-                                            <a href="#">The Citizen Apartment 5th Floor</a>
-                                        </h6>
-
-                                        <p class="text-capitalize">
-                                            <i class="fa fa-map-marker"></i>
-                                            west flaminggo road, las vegas
-                                        </p>
-                                        <ul class="list-inline card__content">
-                                            <li class="list-inline-item">
-
-                                                <span>
-                                                    baths <br>
-                                                    <i class="fa fa-bath"></i> 2
-                                                </span>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <span>
-                                                    beds <br>
-                                                    <i class="fa fa-bed"></i> 3
-                                                </span>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <span>
-                                                    rooms <br>
-                                                    <i class="fa fa-inbox"></i> 3
-                                                </span>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <span>
-                                                    area <br>
-                                                    <i class="fa fa-map"></i> 4300 sq ft
-                                                </span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="card__image-footer">
-                                        <figure>
-                                            <img src="images/80x80.jpg" alt="" class="img-fluid rounded-circle">
-                                        </figure>
-                                        <ul class="list-inline my-auto">
-                                            <li class="list-inline-item">
-                                                <a href="#">
-                                                    tom wilson <br>
-                                                </a>
-
-                                            </li>
-
-                                        </ul>
-                                        <ul class="list-inline my-auto ml-auto">
-                                            <li class="list-inline-item">
-
-                                                <h6 class="text-primary">$350.000</h6>
-                                            </li>
-
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <!-- SEVEN -->
-                                <div class="card__image">
-                                    <div class="card__image-header h-250">
-                                        <div class="ribbon text-capitalize">featured</div>
-                                        <img src="images/1920x1080.jpg" alt="" class="img-fluid w100 img-transition">
-                                        <div class="info"> for sale</div>
-                                    </div>
-                                    <div class="card__image-body">
-                                        <span class="badge badge-primary text-capitalize mb-2">house</span>
-                                        <h6 class="text-capitalize">
-                                            <a href="#">Family Home For Sale</a>
-                                        </h6>
-
-                                        <p class="text-capitalize">
-                                            <i class="fa fa-map-marker"></i>
-                                            west flaminggo road, las vegas
-                                        </p>
-                                        <ul class="list-inline card__content">
-                                            <li class="list-inline-item">
-
-                                                <span>
-                                                    baths <br>
-                                                    <i class="fa fa-bath"></i> 2
-                                                </span>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <span>
-                                                    beds <br>
-                                                    <i class="fa fa-bed"></i> 3
-                                                </span>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <span>
-                                                    rooms <br>
-                                                    <i class="fa fa-inbox"></i> 3
-                                                </span>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <span>
-                                                    area <br>
-                                                    <i class="fa fa-map"></i> 4300 sq ft
-                                                </span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="card__image-footer">
-                                        <figure>
-                                            <img src="images/80x80.jpg" alt="" class="img-fluid rounded-circle">
-                                        </figure>
-                                        <ul class="list-inline my-auto">
-                                            <li class="list-inline-item">
-                                                <a href="#">
-                                                    tom wilson
-                                                </a>
-
-                                            </li>
-
-                                        </ul>
-                                        <ul class="list-inline my-auto ml-auto">
-                                            <li class="list-inline-item">
-
-                                                <h6 class="text-primary">$350.000</h6>
-                                            </li>
-
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
 
                         </div>
                     </div>

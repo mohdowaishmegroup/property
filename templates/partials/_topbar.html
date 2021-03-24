@@ -6,12 +6,21 @@
             <div class="col-sm-12 col-md-5">
                 <div class="topbar-left">
                     <div class="topbar-text">
-                        Monday, March 22, 2020
+                        {% now 'D, M d, Y' %}
                     </div>
                 </div>
             </div>
             <div class="col-sm-12 col-md-7">
                 <div class="list-unstyled topbar-right">
+                {% if datas.name %}
+                <ul class="topbar-link">
+                     <li><a href="#" title="">Career</a></li>
+                    <li><a href="#"><i class="fa fa-user-o"> {{datas.name}}</a></i>
+
+                </ul>
+                </div>
+            </div>
+                {% else %}
                     <ul class="topbar-link">
                         <li><a href="#" title="">Career</a></li>
                         <li><a href="{% url 'register' %}" title="register">Contact Us</a></li>
@@ -27,8 +36,11 @@
                         <li>
                             <a href="#"><i class="fa fa-instagram"></i></a>
                         </li>
+
                     </ul>
+                {% endif %}
                 </div>
+
             </div>
         </div>
     </div>

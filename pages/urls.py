@@ -8,7 +8,11 @@ urlpatterns = [
     path('dashbord',views.index, name='dashbord'),
     path('about', views.about, name='about'),
     path('login',views.login,name="login"),
-    path('register',views.register,name="register"),
+    path('register',views.register,name="register"),  
+    path('single',views.single,name="single"),
+    path('single/<int:List_id>',views.single,name="id"),
+    path('date',views.showdate,name="datetime")
     
-    path('single',views.single,name="login"),
+    
+
 ]

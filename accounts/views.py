@@ -12,7 +12,7 @@ from django.core.mail import EmailMultiAlternatives
 from email.message import EmailMessage
 from django.template import Context
 from django.template.loader import render_to_string
-import smtplib
+import smtplib,requests
 from .serializers import *
 from django.shortcuts import render, redirect
 
@@ -144,8 +144,13 @@ class AdminLoginTokenObtainPairView(TokenObtainPairView):
             return Response({'status': 'error', 'message': 'No active account found with the given credentials'}, status=403)
         
         
-        return redirect('dashbord')
+        # return redirect('dashbord')
+        datas=serializer.validated_data
+        callapi=requests.get('http://127.0.0.1:8000/listings/r/view/')
+        result=callapi.json()
+        data=result['results']
         # return Response(serializer.validated_data, status=200)
+        return render(request,'pages/index.html',{'datas':datas,'data':data})
 # class SupplierLoginTokenObtainPairView(TokenObtainPairView):
 #     serializer_class = UserTokenObtainPairSerializer
 

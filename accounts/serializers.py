@@ -23,7 +23,7 @@ class UserTokenObtainPairSerializer(TokenObtainPairSerializer):
         data['gender']=self.user.gender
         self.user.last_login = timezone.now()
         self.user.save()
-        uid=data['id']     
+        uid=data['name']     
         print("validate",uid)
         return data
 

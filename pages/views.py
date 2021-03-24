@@ -1,8 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render,get_object_or_404
 from django .http import HttpResponse
 from listings.models import Listing
 from realtors.models import Realtor
-import requests
+import requests,datetime
 
 def index(request):
 
@@ -13,7 +13,7 @@ def index(request):
     return render(request,'pages/index.html',{'data':data})
 
 def about(request):
-
+    
     #get realtor 
     realtors = Realtor.objects.order_by('-hire_date')
 
@@ -32,5 +32,17 @@ def login(request):
 def register(request):
     return render(request,'account/register.html')
 
-def single(request):
-    return render(request,'pages/singleproperty.html')
+def single(request,List_id):
+    callapi=requests.get('http://127.0.0.1:8000/listings/r/view/')
+    result=callapi.json()
+    data=result['results']
+    for results in data:
+        if(results['id']==List_id):
+            lists=results
+            # print(results)
+
+    return render(request,'pages/singleproperty.html',{'data':data,'list':lists})
+
+def showdate(request):
+    datetime.datetime.now()
+    return render(request,'partials/_topbar.html')
